@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+
+  <link rel="icon" type="image/png" href="img/favicon.png">
+
+  <link rel="stylesheet" href="css/nouislider.min.css">
+  <link rel="stylesheet" href="css/options.css">
+
+</head>
+
+<body>
+
+  <div class="wrapper">
+
+    <div class="middlecolumn1">
+      <span>Drag sliders to adjust schedule, choose themes with dropdowns.</span>
+    </div>
+
+    <div class="middlecolumn2">
+
+      <div id="range"></div>
+      <span id="tsHourEarly" class="hidden"></span>
+      <input id="tsHourLate" class="hidden">
+
+    </div>
+
+    <div class="middlecolumn3">
+
+      <select id="tsThemeLate" class="dark">
+        <option value="{972ce4c6-7e08-4474-a285-3208198ce6fd}">Default Theme</option>
+        <option value="firefox-compact-light@mozilla.org@personas.mozilla.org">Light Theme</option>
+        <option value="firefox-compact-dark@mozilla.org@personas.mozilla.org">Dark Theme</option>
+      </select>
+
+      <select id="tsThemeEarly">
+        <option value="{972ce4c6-7e08-4474-a285-3208198ce6fd}">Default Theme</option>
+        <option value="firefox-compact-light@mozilla.org@personas.mozilla.org">Light Theme</option>
+        <option value="firefox-compact-dark@mozilla.org@personas.mozilla.org">Dark Theme</option>
+      </select>
+
+      <button id="tsSaveId" class="browser-style">Save</button>
+
+    </div>
+
+  </div>
+
+    <div class="footer">
+      <span><a href="https://icons8.com/icon/13526/Schedule">Icons8: Schedule icon</a> - <a href="https://refreshless.com/nouislider/">noUiSlider: JavaScript Range Slider</a></span>
+    </div>
+
+  <script src="js/options.js"></script>
+  <script src="js/nouislider.min.js"></script>
+  <script src="js/wNumb.js"></script>
+  <script src="js/range.js"></script>
+
+</body>
+
+</html>

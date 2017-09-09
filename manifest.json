@@ -1,0 +1,35 @@
+{
+  "manifest_version": 2,
+  "name": "Theme Scheduler",
+  "version": "0.8",
+  "description": "A theme scheduler.",
+  "developer": {
+    "name": "Claymont",
+    "url": "https://github.com/Claymont/light-dark-theme-switcher"
+  },
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true
+  },
+  "icons": {
+    "32": "icons/32.png",
+    "48": "icons/48.png",
+    "96": "icons/96.png"
+  },
+  "permissions": [
+    "alarms",
+    "theme",
+    "management"
+  ],
+  "background": {
+    "scripts": [
+      "js/background.js"
+    ]
+  },
+  "applications": {
+    "gecko": {
+      "id": "addon@example.com",
+      "strict_min_version": "55.0"
+    }
+  }
+}
