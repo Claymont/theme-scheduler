@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Theme Scheduler",
-  "version": "0.8.1",
+  "version": "0.9",
   "description": "A theme scheduler.",
   "developer": {
     "name": "Claymont",
@@ -28,7 +28,7 @@
   },
   "applications": {
     "gecko": {
-      "id": "addon@example.com",
+      "id": "claymont@mail.com_theme-scheduler",
       "strict_min_version": "55.0"
     }
   }
