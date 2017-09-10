@@ -1,15 +1,5 @@
 var range = document.getElementById('range');
 
-var start;
-if (localStorage.getItem('noUiSlider') == null) {
-  start = [8, 20];
-} else {
-  start = localStorage.getItem('noUiSlider').split(","),
-function (value) {
-  return parseFloat(value, 1);
-  };
-}
-
 var startEarly;
 if (localStorage.getItem('tsHourEarly') === null) {
   startEarly = 7
