@@ -1,11 +1,11 @@
 {
   "manifest_version": 2,
   "name": "Theme Scheduler",
-  "version": "0.8",
+  "version": "0.8.1",
   "description": "A theme scheduler.",
   "developer": {
     "name": "Claymont",
-    "url": "https://github.com/Claymont/light-dark-theme-switcher"
+    "url": "https://github.com/Claymont/theme-scheduler"
   },
   "options_ui": {
     "page": "options.html",

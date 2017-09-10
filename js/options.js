@@ -29,4 +29,6 @@ document.getElementById("tsSaveId").addEventListener("click", function() {
   localStorage['tsHourEarly'] = document.getElementById('tsHourEarly').innerHTML;
   localStorage['tsHourLate'] = document.getElementById('tsHourLate').value;
   localStorage.tsHourEarlySubOne = localStorage.tsHourEarly - localStorage.tsSubOne;
+  var page = browser.extension.getBackgroundPage();
+  page.checkTime();
 })
