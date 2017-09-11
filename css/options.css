@@ -113,10 +113,8 @@ select {
   margin-bottom: 20px;
 }
 
-#value-span, #value-input {
-  text-align: center;
-  margin: 0;
-  border: none;
+.hidden {
+  visibility: collapse;
 }
 
 .c-1-color { background: #4a4a4f; }
@@ -133,10 +131,6 @@ select {
 
 .noUi-handle:before,.noUi-handle:after {
   background: #fff !important;
-}
-
-.hidden {
-  visibility: collapse;
 }
 
 .footer {
