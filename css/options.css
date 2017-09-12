@@ -32,12 +32,13 @@ a:hover {
 .middlecolumn2 {
   grid-column: 1;
   grid-row: 2;
+  margin-top: 48px;
 }
 
 .middlecolumn3 {
   grid-column: 1;
   grid-row: 3;
-
+  margin-top: 48px;
 }
 
 button, select {
@@ -108,9 +109,7 @@ select {
 }
 
 #range {
-  width: 446px;
-  margin-top: 60px;
-  margin-bottom: 20px;
+  width: 628px;
 }
 
 .hidden {

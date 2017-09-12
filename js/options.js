@@ -69,7 +69,14 @@ noUiSlider.create(range, {
   margin: 2,
   connect: [true, true, true],
   behaviour: 'tap-drag',
-  tooltips: true,
+  pips: {
+    mode: 'steps',
+    density: 2,
+    format: wNumb({
+      decimals: 2,
+      mark: ':'
+    })
+  },
   range: {
     'min': 1,
     'max': 23,
