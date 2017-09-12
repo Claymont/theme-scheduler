@@ -93,7 +93,7 @@ range.noUiSlider.on('update', function( values, handle ) {
   if ( handle ) {
     valueInput.value = values[handle];
   } else {
-    valueSpan.innerHTML = values[handle];
+    valueSpan.value = values[handle];
   }
 });
 
@@ -104,7 +104,7 @@ valueInput.addEventListener('change', function() {
 document.getElementById("tsSaveId").addEventListener("click", function() {
   localStorage['tsThemeEarly'] = document.getElementById('tsThemeEarly').value;
   localStorage['tsThemeLate'] = document.getElementById('tsThemeLate').value;
-  localStorage['tsHourEarly'] = document.getElementById('tsHourEarly').innerHTML;
+  localStorage['tsHourEarly'] = document.getElementById('tsHourEarly').value;
   localStorage['tsHourLate'] = document.getElementById('tsHourLate').value;
   localStorage.tsHourEarlySubOne = localStorage.tsHourEarly - localStorage.tsSubOne;
   var page = browser.extension.getBackgroundPage();
