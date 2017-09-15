@@ -1,5 +1,6 @@
 html {
   font-family: "Segoe UI", "San Fransisco", Ubuntu, sans-serif;
+  font-size: 15px;
 }
 
 body {
@@ -22,37 +23,31 @@ a:hover {
   justify-items: center;
 }
 
-.middlecolumn1 {
-  grid-column: 1;
+.rowone {
   grid-row: 1;
-  margin-top: 50px;
+  margin-top: 48px;
   font-size: 15px;
 }
 
-.middlecolumn2 {
-  grid-column: 1;
+.rowtwo {
   grid-row: 2;
-  margin-top: 48px;
+  margin-top: 54px;
 }
 
-.middlecolumn3 {
-  grid-column: 1;
+.rowthree {
   grid-row: 3;
-  margin-top: 48px;
+  margin-top: 78px;
 }
 
 button, select {
   -moz-appearance: none;
+  height: 30px;
   font-size: 15px;
   min-width: 145px;
-  outline: 0 !important;
   padding: 0 8px 0;
 }
 
 button {
-  height: 30px;
-  margin-top: 8px;
-  margin-bottom: 50px;
   border: 1px solid #d7d7db;
   background-color: #f9f9fa;
 }
@@ -62,15 +57,12 @@ button:hover {
   border: 1px solid #d7d7db;
 }
 
-button:focus {
-  background-color: #ebebeb;
+button:active {
+  background-color: #dadada;
   border: 1px solid #d7d7db;
 }
 
 select {
-  -moz-appearance: none;
-  height: 30px;
-  margin-bottom: 4px;
   background-repeat: no-repeat;
   background-position: calc(100% - 5px) center;
   background-size: 16px;
@@ -109,11 +101,20 @@ select {
 }
 
 #range {
-  width: 628px;
+  width: 448px;
+}
+
+#tsHourEarly ,#tsHourLate {
+  border: none;
+  text-align: right;
+  background-color: #f9f9fa;
+  font-size: 15px;
+  line-height: 28px;
+  width: 18px;
 }
 
 .hidden {
-  visibility: collapse;
+  display: none;
 }
 
 .c-1-color { background: #4a4a4f; }

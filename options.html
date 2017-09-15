@@ -17,38 +17,39 @@
 
   <div class="wrapper">
 
-    <div class="middlecolumn1">
+    <div class="rowone">
+
       <span>Drag sliders to adjust schedule, choose themes with dropdowns.</span>
-    </div>
-
-    <div class="middlecolumn2">
-
-      <div id="range"></div>
-      <span id="tsHourEarly" class="hidden"></span>
-      <input id="tsHourLate" class="hidden">
 
     </div>
 
-    <div class="middlecolumn3">
+    <div class="rowtwo">
+
+      <div id="range">
+      </div>
+      <input id="tsHourEarly" class="hidden" readonly>
+      <input id="tsHourLate" class="hidden" readonly>
+
+    </div>
+
+    <div class="rowthree">
 
       <select id="tsThemeLate" class="darkselect">
       </select>
-
       <select id="tsThemeEarly" class="lightselect">
       </select>
-
       <button id="tsSaveId">Save</button>
 
-    <div class="middlecolumn4">
-    </div>
 
     </div>
 
   </div>
 
-    <div class="footer">
-      <span>Theme Scheduler v1.3.1: <a href="https://addons.mozilla.org/en-US/firefox/addon/theme-scheduler/">AMO</a> / <a href="https://github.com/Claymont/theme-scheduler">GitHub</a> - <a href="https://icons8.com/icon/13526/Schedule">Icons8: Schedule icon</a> - <a href="https://refreshless.com/nouislider/">noUiSlider: JavaScript Range Slider</a></span>
-    </div>
+  <div class="footer">
+
+    <span>Theme Scheduler v1.5.2: <a href="https://addons.mozilla.org/en-US/firefox/addon/theme-scheduler/">AMO</a> / <a href="https://github.com/Claymont/theme-scheduler">GitHub</a> - <a href="https://icons8.com/icon/13526/Schedule">Icons8: Schedule icon</a> - <a href="https://refreshless.com/nouislider/">noUiSlider: JavaScript Range Slider</a></span>
+
+  </div>
 
   <script src="js/nouislider.min.js"></script>
   <script src="js/wNumb.js"></script>

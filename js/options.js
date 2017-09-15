@@ -5,16 +5,10 @@ if (localStorage.getItem('tsThemeLate') === null) {
   localStorage['tsThemeLate'] = ('firefox-compact-dark@mozilla.org@personas.mozilla.org');
 }
 if (localStorage.getItem('tsHourEarly') === null) {
-  localStorage['tsHourEarly'] = ('7');
-}
-if (localStorage.getItem('tsSubOne') === null) {
-  localStorage['tsSubOne'] = ('1');
-}
-if (localStorage.getItem('tsHourEarlySubOne') === null) {
-  localStorage['tsHourEarlySubOne'] = ('6');
+  localStorage['tsHourEarly'] = ('6');
 }
 if (localStorage.getItem('tsHourLate') === null) {
-  localStorage['tsHourLate'] = ('17');
+  localStorage['tsHourLate'] = ('18');
 }
 
 browser.management.getAll((extensions) => {
@@ -50,18 +44,10 @@ browser.management.getAll((extensions) => {
 var range = document.getElementById('range');
 
 var startEarly;
-if (localStorage.getItem('tsHourEarly') === null) {
-  startEarly = 7
-} else {
-  startEarly = localStorage.getItem('tsHourEarly')
-}
+  startEarly = localStorage.getItem('tsHourEarly');
 
 var startLate;
-if (localStorage.getItem('tsHourLate') === null) {
-  startLate = 17
-} else {
-  startLate = localStorage.getItem('tsHourLate')
-}
+  startLate = localStorage.getItem('tsHourLate');
 
 noUiSlider.create(range, {
   start: [startEarly, startLate],
@@ -69,17 +55,19 @@ noUiSlider.create(range, {
   margin: 2,
   connect: [true, true, true],
   behaviour: 'tap-drag',
+  tooltips: true,
+  range: {
+    'min': 0,
+    'max': 23,
+  },
   pips: {
-    mode: 'steps',
-    density: 2,
+    mode: 'values',
+    values: [0, 6, 12, 18, 23],
+    stepped: true,
     format: wNumb({
       decimals: 2,
-      mark: ':'
+      mark: ':',
     })
-  },
-  range: {
-    'min': 1,
-    'max': 23,
   },
   format: wNumb({
     decimals: 0,
@@ -93,19 +81,15 @@ for ( var i = 0; i < connect.length; i++ ) {
   connect[i].classList.add(classes[i]);
 }
 
-var valueInput = document.getElementById('tsHourLate'),
-  valueSpan = document.getElementById('tsHourEarly');
+var valueLate = document.getElementById('tsHourLate'),
+  valueEarly = document.getElementById('tsHourEarly');
 
 range.noUiSlider.on('update', function( values, handle ) {
   if ( handle ) {
-    valueInput.value = values[handle];
+    valueLate.value = values[handle];
   } else {
-    valueSpan.value = values[handle];
+    valueEarly.value = values[handle];
   }
-});
-
-valueInput.addEventListener('change', function() {
-  range.noUiSlider.set([tsHourLate, tsHourEarly]);
 });
 
 document.getElementById("tsSaveId").addEventListener("click", function() {
@@ -113,7 +97,6 @@ document.getElementById("tsSaveId").addEventListener("click", function() {
   localStorage['tsThemeLate'] = document.getElementById('tsThemeLate').value;
   localStorage['tsHourEarly'] = document.getElementById('tsHourEarly').value;
   localStorage['tsHourLate'] = document.getElementById('tsHourLate').value;
-  localStorage.tsHourEarlySubOne = localStorage.tsHourEarly - localStorage.tsSubOne;
   var page = browser.extension.getBackgroundPage();
   page.checkTime();
 })
