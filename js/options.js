@@ -1,8 +1,8 @@
 if (localStorage.getItem('tsThemeEarly') === null) {
-  localStorage['tsThemeEarly'] = ('firefox-compact-light@mozilla.org@personas.mozilla.org');
+  localStorage['tsThemeEarly'] = ('firefox-compact-light@mozilla.org');
 }
 if (localStorage.getItem('tsThemeLate') === null) {
-  localStorage['tsThemeLate'] = ('firefox-compact-dark@mozilla.org@personas.mozilla.org');
+  localStorage['tsThemeLate'] = ('firefox-compact-dark@mozilla.org');
 }
 if (localStorage.getItem('tsHourEarly') === null) {
   localStorage['tsHourEarly'] = ('6');
